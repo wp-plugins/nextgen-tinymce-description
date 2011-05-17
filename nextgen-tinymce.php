@@ -4,7 +4,7 @@ Plugin Name: NextGen TinyMCE Picture Description
 Plugin URI: http://marbu.org/marbu/wordpress-plugin-tinymce-in-nextgen/
 Description: add TinyCME to NextGEN gallery picture description
 Author: Marco Buttarini
-Version: 1.0
+Version: 1.1
 Author URI: http://marbu.og
 */
 
