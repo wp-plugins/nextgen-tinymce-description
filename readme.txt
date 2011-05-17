@@ -2,9 +2,9 @@
 Contributors: Marco Buttarini
 Donate link: http://marbu.org/marbu/donate/
 Tags: nextgen, tinymce, wysiwyg, admin,pictures,nextgen-gallery,nextgen gallery
-Requires at least: 3.0
+Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: trunk
+Stable tag: 1.0
 
 NextGEN TinyMce Description add native tinymce to nextgen gallery picture description.
 
