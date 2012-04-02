@@ -4,7 +4,7 @@ Donate link: http://marbu.org/marbu/donate/
 Tags: nextgen, tinymce, wysiwyg, admin,pictures,nextgen-gallery,nextgen gallery
 Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 NextGEN TinyMce Description add native tinymce to nextgen gallery picture description.
 
@@ -39,8 +39,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 That's it ... Have fun
 
+== Frequently Asked Questions ==
+
+= It was broken for a long time, is it working now? =
+
+Thanks to Giorgio Martello now is working!
 
 == Screenshots ==
 
 1. Screenshot TinyMCE in Gallery 
+
+== Changelog ==
+
+= 1.2 =
+* Fixed problems with wordpress 3.1
+
+== Upgrade Notice ==
+
+= 1.2 =
+Upgrade it for let it work on last version of Wordpress and Nextgen
+
 
