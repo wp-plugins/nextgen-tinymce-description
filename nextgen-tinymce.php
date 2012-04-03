@@ -4,15 +4,17 @@ Plugin Name: NextGen TinyMCE Picture Description
 Plugin URI: http://marbu.org/marbu/wordpress-plugin-tinymce-in-nextgen/
 Description: add TinyCME to NextGEN gallery picture description
 Author: Marco Buttarini & Giorgio Martello
-Version: 1.2
+Version: 1.3.1
 Author URI: http://marbu.org
 */
 
 if( !empty($_SERVER['SCRIPT_FILENAME']) && __FILE__ == $_SERVER['SCRIPT_FILENAME']) { die('direct access not alowed '); }
 
-if( $_GET['page'] == 'nggallery-manage-gallery' ){
-    
+if( is_admin() && isset($_GET['page']) && $_GET['page'] == 'nggallery-manage-gallery' ){
+
+    add_filter('admin_head','load_tiny_mce_editor');
     add_action('admin_footer', 'load_nextgen_tinymce');
+    
     
     function load_nextgen_tinymce(){
     ?>
@@ -55,5 +57,27 @@ if( $_GET['page'] == 'nggallery-manage-gallery' ){
         </script>
     <?php
     }
+    
+    /**
+     * load tinymce javascript files
+     * 
+     * thanks to http://stackoverflow.com/users/148174/marty
+     * http://stackoverflow.com/questions/2855890/add-tinymce-to-wordpress-plugin
+     * 
+     */
+    function load_tiny_mce_editor() {
+        wp_enqueue_script( 'common' );
+        wp_enqueue_script( 'jquery-color' );
+        wp_print_scripts('editor');
+        if (function_exists('add_thickbox')) add_thickbox();
+        wp_print_scripts('media-upload');
+        if (function_exists('wp_tiny_mce')) wp_tiny_mce();
+        wp_admin_css();
+        wp_enqueue_script('utils');
+        do_action("admin_print_styles-post-php");
+        do_action('admin_print_styles');
+    }
+    
+    
     
 }
