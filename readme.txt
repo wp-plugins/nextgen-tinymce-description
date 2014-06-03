@@ -53,6 +53,9 @@ Thanks to Giorgio Martello now is working!
 == Changelog ==
 
 
+= 1.4 =
+* Fixed problems with new nextgen version
+
 = 1.3 =
 * Fixed problems with wordpress 3.1 and TinyMCE
 
