@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: NextGen TinyMCE Picture Description
-Plugin URI: http://marbu.org/marbu/wordpress-plugin-tinymce-in-nextgen/
+Plugin URI: http://marbu.org/wordpress-plugin-tinymce-in-nextgen/
 Description: add TinyCME to NextGEN gallery picture description
-Author: Marco Buttarini & Giorgio Martello
-Version: 1.3.1
+Author: Marco Buttarini & Giorgio Martello & Andrea Brugnolo
+Version: 1.4
 Author URI: http://marbu.org
 */
 
@@ -15,24 +15,42 @@ if( is_admin() && isset($_GET['page']) && $_GET['page'] == 'nggallery-manage-gal
     add_filter('admin_head','load_tiny_mce_editor');
     add_action('admin_footer', 'load_nextgen_tinymce');
     
-    
     function load_nextgen_tinymce(){
     ?>
         <script type="text/javascript">
-            jQuery(document).ready(function(){
-                
+
+			jQuery(document).ready(function(){
+                var newnextgen = false;
                 var elements=[];
                 
                 jQuery('textarea').filter(function() {
-                    return jQuery(this).attr('name').match(/description\[[0-9]{1,}\]+/);
+                    
+					if(jQuery(this).attr('name').match(/\[[0-9]{1,}\]+\[description\]/))
+					{ 	
+						newnextgen = true;
+						return jQuery(this).attr('name').match(/\[[0-9]{1,}\]+\[description\]/)
+					} 
+					else 
+					{
+						newnextgen = false;
+						return jQuery(this).attr('name').match(/description\[[0-9]{1,}\]+/)
+					}	
+					
                 }).each(function(k){
-                    
-                    var elem_id = 'description-'+jQuery(this).parent().parent().attr('id');
-                    jQuery(this).attr('id', elem_id );
+				 
+					if(newnextgen = false)
+					{
+						var elem_id = 'description-'+jQuery(this).parent().parent().attr('id');
+					} else {
+						var elem_id = 'description-'+jQuery(this).parent().parent().find('.column-2').text();						
+					}	
+			
+					jQuery(this).attr('id', elem_id );
                     elements.push(elem_id);
-                    
                 });
                 
+				
+				
                 tinyMCE.init({
                     mode : "exact",
                     elements: elements.join(','),
