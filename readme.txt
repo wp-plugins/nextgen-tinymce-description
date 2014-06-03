@@ -13,6 +13,7 @@ NextGEN TinyMce Description add native tinymce to nextgen gallery picture descri
 NextGEN TinyMce Description simply integrate tinymce wysiwyg to the description of the picture in a NextGEN gallery. 
 
 == Credits ==
+Developed with the help of Andrea Brugnolo & Giorgio Martello
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
