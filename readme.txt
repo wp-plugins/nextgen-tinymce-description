@@ -3,7 +3,7 @@ Contributors: Marco Buttarini
 Donate link: http://marbu.org/marbu/donate/
 Tags: nextgen, tinymce, wysiwyg, admin,pictures,nextgen-gallery,nextgen gallery
 Requires at least: 2.8
-Tested up to: 3.7
+Tested up to: 4.7.2
 Stable tag: 1.4
 
 NextGEN TinyMce Description add native tinymce to nextgen gallery picture description.
@@ -13,7 +13,7 @@ NextGEN TinyMce Description add native tinymce to nextgen gallery picture descri
 NextGEN TinyMce Description simply integrate tinymce wysiwyg to the description of the picture in a NextGEN gallery. 
 
 == Credits ==
-Developed with the help of Andrea Brugnolo & Giorgio Martello
+Developed with the help of Andrea Brugnolo & Giorgio Martello & Berend Dekens
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ That's it ... Have fun
 
 = It was broken for a long time, is it working now? =
 
-Thanks to Giorgio Martello now is working!
+Thanks to Berend Dekens now is working!
 
 == Screenshots ==
 
@@ -52,6 +52,8 @@ Thanks to Giorgio Martello now is working!
 
 == Changelog ==
 
+= 1.5 =
+* Rewrote to be compatible with WordPress 4.7+
 
 = 1.4 =
 * Fixed problems with new nextgen version
